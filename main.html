@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Michael de Winter</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
+  </head>
+  <body>
+    <!-- Background Canvas for Dynamic Effect -->
+    <canvas id="background"></canvas>
+
+    <!-- Navigation Bar -->
+    <nav>
+      <ul>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#visualizations">Visualizations</a></li>
+        <li><a href="#cv">Download CV</a></li>
+      </ul>
+    </nav>
+
+    <div id="main.container">
+      <!-- Sections -->
+      <section id="about" class="glass">
+        <h1>About Me</h1>
+        <p>
+          Hi, I’m Michael de Winter – Full Stack Data Scientist. With over
+          <span id="years"></span>
+          years of experience in data science, I specialize in helping
+          organizations uncover valuable insights from large and complex
+          datasets. I excel in delivering end-to-end solutions, from designing
+          and building data pipelines to developing and deploying machine
+          learning models. In recent years, my primary focus has been on
+          leveraging machine learning for satellite data and remote sensing.
+        </p>
+        <h2>Tools</h2>
+        <div class="tools">
+          <i class="devicon-python-plain colored" title="Python"></i>
+          <i class="devicon-rstudio-plain colored" title="RStudio"></i>
+          <i class="devicon-azuresqldatabase-plain colored" title="SQL"></i>
+          <i
+            class="devicon-apachespark-plain-wordmark colored"
+            title="PySpark"
+          ></i>
+
+          <i class="devicon-github-original-wordmark" title="Github" x></i>
+
+          <i class="devicon-azure-plain colored" title="Azure"></i>
+          <i class="devicon-javascript-plain colored" title="JavaScript"></i>
+          <i class="devicon-docker-plain colored" title="Docker"></i>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projects" class="glass">
+        <h1>(Open Source) Projects</h1>
+        <div id="pinned-projects" class="project-container"></div>
+      </section>
+
+      <section id="visualizations" class="glass">
+        <h1>Visualizations</h1>
+        <div>
+          <img src="visualization1.png" alt="Visualization 1" />
+          <img src="visualization2.png" alt="Visualization 2" />
+        </div>
+      </section>
+
+      <section id="cv" class="glass">
+        <h1>Download My CV</h1>
+        <a href="YourCV.pdf" download="YourCV.pdf">
+          <button>Download CV</button>
+        </a>
+      </section>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

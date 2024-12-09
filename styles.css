@@ -1,0 +1,172 @@
+/* General Styles */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  background: linear-gradient(120deg, #2c3e50, #4ca1af);
+  height: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  color: white;
+}
+
+/* Canvas Background */
+#background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none; /* Prevent interaction with the canvas */
+}
+
+/* Navigation Bar */
+nav {
+  display: flex;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #4ca1af;
+}
+
+/* Section Styling */
+section {
+  max-width: 800px;
+  margin: 80px auto 40px auto; /* Add margin for spacing */
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  overflow-wrap: break-word; /* Prevent long content from overflowing */
+}
+
+/* Glass Effect */
+.glass {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  max-width: 800px;
+}
+
+/* Project Container */
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.project {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s;
+}
+
+.project:hover {
+  transform: scale(1.05);
+}
+
+.project h2 {
+  color: #4ca1af;
+  font-size: 1.2rem;
+}
+
+.project p {
+  font-size: 0.9rem;
+  color: #ddd;
+}
+
+.project a {
+  text-decoration: none;
+  color: #4ca1af;
+  font-weight: bold;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+/* Main Container */
+#main\\.container {
+  overflow: visible; /* Allow natural scrolling of the entire page */
+  padding: 20px; /* Adds spacing for content */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav ul {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .project-container {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  section {
+    padding: 15px;
+  }
+}
+
+/* Tools Section */
+.tools {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.tools i {
+  font-size: 40px; /* Adjust size as needed */
+  transition: transform 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+.tools i:hover {
+  transform: scale(1.2); /* Slight zoom effect on hover */
+  color: #4ca1af; /* Highlight color on hover */
+}
+
+.tools i:hover:after {
+  content: attr(title); /* Get the tooltip text from the attribute */
+  position: absolute;
+  bottom: -35px; /* Position below the icon */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  white-space: nowrap;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
