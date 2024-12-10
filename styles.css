@@ -185,3 +185,56 @@ section {
   pointer-events: none;
   transition: opacity 0.3s ease;
 }
+
+#visualizations {
+  margin: 2em 0;
+  font-family: Arial, sans-serif;
+}
+
+#visualizations h1 {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+
+#visualizations p {
+  font-size: 1.2em;
+  line-height: 1.5;
+  margin-bottom: 1em;
+}
+
+.articles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+}
+
+article {
+  background: #f9f9f9;
+  padding: 1em;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  max-width: 400px;
+}
+
+figure {
+  margin: 0;
+  text-align: center;
+}
+
+figure img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+figcaption {
+  font-size: 0.9em;
+  color: #555;
+  margin-top: 0.5em;
+}
+
+article p {
+  margin-top: 1em;
+  font-size: 1em;
+  line-height: 1.4;
+}
