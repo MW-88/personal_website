@@ -9,6 +9,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
     />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
   </head>
   <body>
     <!-- Background Canvas for Dynamic Effect -->
@@ -61,23 +62,21 @@
           <i class="devicon-docker-plain colored" title="Docker"></i>
         </div>
       </section>
-
-      <!-- Projects Section -->
-      <section id="projects" class="glass">
-        <div id="pinned-projects" class="project-container"></div>
-      </section>
-
       <section id="visualizations" class="glass">
         <h1>Articles</h1>
         <hr />
-        <h2>Dectecting aquatic plants in the Nieuwkoopse Plassen</h2>
+        <h2>
+          Detecting aquatic plants populations for monitoring satellite images
+          of the Nieuwkoopse Plassen
+        </h2>
         <p>
           Aquatic plants play an important role in biodiversity within the
           Natura 2000 area of the Nieuwkoopse Plassen in the Netherlands. Using
-          a machine learning model and satellite images, we annotate aquatic
-          plants to monitor their total population annually. Unfortunately, the
-          population of aquatic plants is decreasing each year. Measures need to
-          be taken to reverse this trend and increase their population.
+          a pixel based random forest machine learning model and satellite
+          images, we annotate aquatic plants to monitor their total population
+          annually. Unfortunately, the population of aquatic plants is
+          decreasing each year. Measures need to be taken to reverse this trend
+          and increase their population.
         </p>
         <div class="articles">
           <article>
@@ -86,13 +85,11 @@
                 src="images/waterplants_2023_06_03.png"
                 alt="aquatic Plants Analysis - June 2023"
               />
-              <figcaption>aquatic Plants - June 2023</figcaption>
+              <figcaption>
+                Model Annotated Aquatic Plants Pilot - June 2023
+              </figcaption>
             </figure>
-            <p>
-              This visualization highlights the growth patterns and distribution
-              of aquatic plants observed in June 2023. The analysis identifies
-              key factors influencing their habitat.
-            </p>
+            ß
           </article>
           <article>
             <figure>
@@ -100,20 +97,43 @@
                 src="images/waterplants_2023_09_05.png"
                 alt="aquatic Plants Analysis - September 2023"
               />
-              <figcaption>aquatic Plants Analysis - September 2023</figcaption>
+              <figcaption>
+                Model Annotated Aquatic Plants Pilot - September 2023
+              </figcaption>
             </figure>
-            <p>
-              In September 2023, new patterns emerged, showing the seasonal
-              impacts on aquatic plant ecosystems. This article explores these
-              changes in detail.
-            </p>
+          </article>
+
+          Due the largest amount of pixel we have chosen to DGGS to aggregate
+          and visualize the data.
+          <a
+            href="https://ecce.esri.ca/cogs-blog/2018/11/09/dggs-a-new-way-to-model-geospatial-information/"
+            >DGGS</a
+          >
+          <article>
+            <figure>
+              <img src="images/2022_airfoto.PNG" alt="aerial photo" />
+              <figcaption>Aerial photo 2023</figcaption>
+            </figure>
+          </article>
+          <article>
+            <figure>
+              <img src="images/2022_annotations.PNG" alt="aerial photo" />
+              <figcaption>Model Annotated Photo 2023</figcaption>
+            </figure>
           </article>
         </div>
       </section>
-
+      <!-- Projects Section -->
+      <section id="projects" class="glass">
+        <h1>(Open Source) Projects</h1>
+        <div id="pinned-projects" class="project-container"></div>
+      </section>
       <section id="cv" class="glass">
         <h1>Download My CV</h1>
-        <a href="YourCV.pdf" download="YourCV.pdf">
+        <a
+          href="downloads/CV_example_Lise_de_Groot_ENG.pdf"
+          download="downloads/CV_example_Lise_de_Groot_ENG.pdf"
+        >
           <button>Download CV</button>
         </a>
       </section>

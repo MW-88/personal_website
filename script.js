@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 });
 
-const yearsSince2018 = new Date().getFullYear() - 2018;
+const yearsSince2018 = new Date().getFullYear() - 2017;
 
 // Insert the calculated value into the text
 document.getElementById("years").textContent = yearsSince2018;
