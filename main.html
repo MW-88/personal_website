@@ -19,8 +19,8 @@
     <nav>
       <ul>
         <li><a href="#about">About Me</a></li>
+        <li><a href="#visualizations">Articles</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#visualizations">Visualizations</a></li>
         <li><a href="#cv">Download CV</a></li>
       </ul>
     </nav>
@@ -66,18 +66,18 @@
         <h1>Articles</h1>
         <hr />
         <h2>
-          Detecting aquatic plants populations for monitoring satellite images
-          of the Nieuwkoopse Plassen
+          Detecting aquatic plants populations for monitoring with satellite
+          images of the Nieuwkoopse Plassen
         </h2>
         <p>
-          Aquatic plants play an important role in biodiversity within the
-          Natura 2000 area of the Nieuwkoopse Plassen in the Netherlands. Using
-          a pixel based random forest machine learning model,satellite images
-          and a large amount of annotations we could annotate aquatic plants to
-          monitor their total population annually with high accuracy.
-          Unfortunately, the population of aquatic plants is decreasing each
-          year. Measures need to be taken to reverse this trend and increase
-          their population.
+          Aquatic plants play a vital role in maintaining biodiversity within
+          the Natura 2000 area of the Nieuwkoopse Plassen in the Netherlands. By
+          utilizing a pixel-based random forest machine learning model,
+          satellite imagery, and extensive annotations, we successfully
+          identified and monitored aquatic plant populations annually with high
+          model accuracy. Unfortunately, the population of aquatic plants has
+          been declining each year. Urgent measures are needed to reverse this
+          trend and restore their populations.
         </p>
         <div class="articles">
           <article>
@@ -91,7 +91,6 @@
                 Model Annotated Aquatic Plants Pilot - June 2023
               </figcaption>
             </figure>
-            ß
           </article>
           <article>
             <figure>
@@ -106,12 +105,15 @@
             </figure>
           </article>
 
-          Due the largest amount of pixel we have chosen to DGGS to aggregate
-          and visualize the data.
-          <a
-            href="https://ecce.esri.ca/cogs-blog/2018/11/09/dggs-a-new-way-to-model-geospatial-information/"
-            >DGGS</a
-          >
+          <p>
+            Due the largest amount of pixels we have chosen to use DGGS to
+            aggregate and visualize the data. More information about what DGGS
+            are click
+            <a
+              href="https://ecce.esri.ca/cogs-blog/2018/11/09/dggs-a-new-way-to-model-geospatial-information/"
+              >here</a
+            >
+          </p>
           <article>
             <figure>
               <img
@@ -119,7 +121,7 @@
                 alt="aerial photo"
                 onclick="openImage(this.src)"
               />
-              <figcaption>Aerial photo 2023</figcaption>
+              <figcaption>Aerial Photo of Nieuwkoopse Plassen 2023</figcaption>
             </figure>
           </article>
           <article>
@@ -129,7 +131,7 @@
                 alt="aerial photo"
                 onclick="openImage(this.src)"
               />
-              <figcaption>Model Annotated Photo 2023</figcaption>
+              <figcaption>Model Annotated Aquatic Plants 2023</figcaption>
             </figure>
           </article>
         </div>
@@ -141,8 +143,40 @@
             alt="Enlarged Image"
             onclick="closeImage()"
           />
-          <button class="close-button" onclick="closeImage()">&times;</button>
         </div>
+
+        <p>
+          The resulting trendgraphs which counts the total number of hexagons
+          with aquatic plants in them in the Nieuwkoopse Plassen for each year
+          show a downward trend in the population.
+        </p>
+        <article
+          style="
+            display: inline-block; /* Ensure the article behaves as a block element */
+            /* Move the entire content of the article to the right */
+          "
+        >
+          <figure>
+            <img
+              src="images/aquatic_plants_trend_graph.png"
+              alt="Aquatic plans trend graph"
+              onclick="openImage(this.src)"
+            />
+            <figcaption>
+              Trend graph with the total amount of hexagons with aquatic plants
+            </figcaption>
+          </figure>
+        </article>
+
+        <p>
+          For more information like a my github page or download the slides<a
+            href="downloads/Remote-Sensing-EN.pptx"
+            download="downloads/CV_example_Lise_de_Groot_ENG.pdf"
+          >
+            here
+          </a>
+        </p>
+        <hr />
       </section>
       <!-- Projects Section -->
       <section id="projects" class="glass">
