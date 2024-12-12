@@ -72,11 +72,12 @@
         <p>
           Aquatic plants play an important role in biodiversity within the
           Natura 2000 area of the Nieuwkoopse Plassen in the Netherlands. Using
-          a pixel based random forest machine learning model and satellite
-          images, we annotate aquatic plants to monitor their total population
-          annually. Unfortunately, the population of aquatic plants is
-          decreasing each year. Measures need to be taken to reverse this trend
-          and increase their population.
+          a pixel based random forest machine learning model,satellite images
+          and a large amount of annotations we could annotate aquatic plants to
+          monitor their total population annually with high accuracy.
+          Unfortunately, the population of aquatic plants is decreasing each
+          year. Measures need to be taken to reverse this trend and increase
+          their population.
         </p>
         <div class="articles">
           <article>
@@ -84,6 +85,7 @@
               <img
                 src="images/waterplants_2023_06_03.png"
                 alt="aquatic Plants Analysis - June 2023"
+                onclick="openImage(this.src)"
               />
               <figcaption>
                 Model Annotated Aquatic Plants Pilot - June 2023
@@ -96,6 +98,7 @@
               <img
                 src="images/waterplants_2023_09_05.png"
                 alt="aquatic Plants Analysis - September 2023"
+                onclick="openImage(this.src)"
               />
               <figcaption>
                 Model Annotated Aquatic Plants Pilot - September 2023
@@ -111,16 +114,34 @@
           >
           <article>
             <figure>
-              <img src="images/2022_airfoto.PNG" alt="aerial photo" />
+              <img
+                src="images/2022_airfoto.PNG"
+                alt="aerial photo"
+                onclick="openImage(this.src)"
+              />
               <figcaption>Aerial photo 2023</figcaption>
             </figure>
           </article>
           <article>
             <figure>
-              <img src="images/2022_annotations.PNG" alt="aerial photo" />
+              <img
+                src="images/2022_annotations.PNG"
+                alt="aerial photo"
+                onclick="openImage(this.src)"
+              />
               <figcaption>Model Annotated Photo 2023</figcaption>
             </figure>
           </article>
+        </div>
+
+        <div class="enlarged-image" id="enlargedImage">
+          <img
+            id="enlargedImg"
+            src=""
+            alt="Enlarged Image"
+            onclick="closeImage()"
+          />
+          <button class="close-button" onclick="closeImage()">&times;</button>
         </div>
       </section>
       <!-- Projects Section -->

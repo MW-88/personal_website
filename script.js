@@ -64,3 +64,24 @@ const yearsSince2018 = new Date().getFullYear() - 2017;
 
 // Insert the calculated value into the text
 document.getElementById("years").textContent = yearsSince2018;
+
+function openImage(src) {
+  const enlargedImage = document.getElementById("enlargedImage");
+  const enlargedImg = document.getElementById("enlargedImg");
+  enlargedImg.src = src;
+  enlargedImage.style.display = "flex";
+}
+
+function closeImage() {
+  const enlargedImage = document.getElementById("enlargedImage");
+  enlargedImage.style.display = "none";
+}
+
+// Optional: Close the enlarged image when clicking outside of it
+document
+  .getElementById("enlargedImage")
+  .addEventListener("click", function (event) {
+    if (event.target === event.currentTarget) {
+      closeImage();
+    }
+  });
