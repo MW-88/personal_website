@@ -35,7 +35,7 @@
           With over
           <span id="years"></span>
           years of experience in data science, I specialize in helping
-          organizations uncover valuable insights from large and complex
+          organizations uncover valuable insights from (mostly) large and complex
           datasets. I have experience in designing and building data pipelines
           to developing and deploying machine learning models. In recent years,
           my primary focus has been on leveraging machine learning for
@@ -146,9 +146,9 @@
         </div>
 
         <p>
-          The resulting trendgraphs which counts the total number of hexagons
-          with aquatic plants in them in the Nieuwkoopse Plassen for each year
-          show a downward trend in the population.
+          The resulting trend graphs, which show the total number of hexagons
+          containing aquatic plants in the Nieuwkoopse Plassen for each year,
+          indicate a downward trend in the population.
         </p>
         <article
           style="
@@ -169,14 +169,31 @@
         </article>
 
         <p>
-          For more information like a my github page or download the slides<a
+          For more information download the slides<a
             href="downloads/Remote-Sensing-EN.pptx"
             download="downloads/CV_example_Lise_de_Groot_ENG.pdf"
-          >
-            here
+          > here</a>
+            or see my github page
+            <a
+              href="https://github.com/Provincie-Zuid-Holland/remote_sensing_natura2000"
+              >here</a
+            >
           </a>
         </p>
         <hr />
+        <h2>
+          Measuring Traffic Delays in the Province of South Holland to Improve Traffic Conditions Using NDW Data
+        </h2>
+        <p>
+          The <a href="https://opendata.ndw.nu">NDW</a>  provides various types of open traffic data for the Netherlands. We used floating car data to identify which road sections in the province of South Holland experience significant traffic delays, with the goal of improving the traffic situation in these areas.<br><br>
+
+Floating car data differs from traditional traffic counting devices, for which the NDW provides “meetlus” data. It measures only a subset of traffic from vehicles with active Wi-Fi connections. This means it does not provide exact traffic counts but does measure traffic speed. Additionally, it has a much wider reach, covering almost the entire Netherlands, compared to the limited scope of traditional counting devices.<br><br>
+
+By averaging these speed measurements over a year and comparing them to the maximum free-flow speed, we can estimate the level of delay on specific road sections.<br><br> We use the following formula to calculate delay:
+<b>Travel Time / Free-Flow Travel Time.</b> <br><br>
+
+Floating car data from the NDW is substantial. Even when aggregated over a year, it provides data for all roads in the Netherlands in 15-minute intervals. To handle this volume, we used Spark to filter the data to focus only on provincial roads and specific timeframes, such as morning and evening rush hours.
+        </p>
       </section>
       <!-- Projects Section -->
       <section id="projects" class="glass">
