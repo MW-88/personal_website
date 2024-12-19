@@ -69,14 +69,13 @@
         <h1>Articles</h1>
         <hr />
         <h2>
-          Detecting aquatic plants populations for monitoring with satellite
-          images of the Nieuwkoopse Plassen
+          Monitoring Aquatic Plant Populations in the Nieuwkoopse Plassen Using Satellite Imagery
         </h2>
         <p>
           Aquatic plants play a vital role in maintaining biodiversity within
           the Natura 2000 area of the Nieuwkoopse Plassen in the Netherlands. By
           utilizing a pixel-based random forest machine learning model,
-          satellite imagery, and extensive annotations, we successfully
+          satellite imagery, and extensive annotations for the model to learn on, we successfully
           identified and monitored aquatic plant populations annually with high
           model accuracy. Unfortunately, the population of aquatic plants has
           been declining each year. Urgent measures are needed to reverse this
@@ -88,10 +87,10 @@
               <img
                 src="images/waterplants_2023_06_03.png"
                 alt="aquatic Plants Analysis - June 2023"
-                onclick="openImage(this.src)"
+                onclick="openImage(this.src, event)"
               />
               <figcaption>
-                Model Annotated Aquatic Plants Pilot - June 2023
+                Model Annotated Aquatic Plants Pilot Study - June 2023 (Click to Enlarge)
               </figcaption>
             </figure>
           </article>
@@ -100,16 +99,16 @@
               <img
                 src="images/waterplants_2023_09_05.png"
                 alt="aquatic Plants Analysis - September 2023"
-                onclick="openImage(this.src)"
+                onclick="openImage(this.src, event)"
               />
               <figcaption>
-                Model Annotated Aquatic Plants Pilot - September 2023
+                Model Annotated Aquatic Plants Pilot Study - September 2023 (Click to Enlarge)
               </figcaption>
             </figure>
           </article>
 
           <p>
-            Due the largest amount of pixels we have chosen to use DGGS to
+            Due the largest amount of pixels, because the Nieuwkoopse Plassen is a large region, we have chosen to use DGGS to
             aggregate and visualize the data. More information about what DGGS
             are click
             <a
@@ -124,7 +123,7 @@
                 alt="aerial photo"
                 onclick="openImage(this.src, event)"
               />
-              <figcaption>Aerial Photo of Nieuwkoopse Plassen 2023</figcaption>
+              <figcaption>Aerial Photo of Nieuwkoopse Plassen 2023 (Click to Enlarge)</figcaption>
             </figure>
           </article>
           <article>
@@ -134,7 +133,7 @@
                 alt="aerial photo"
                 onclick="openImage(this.src, event)"
               />
-              <figcaption>Model Annotated Aquatic Plants 2023</figcaption>
+              <figcaption>Model Annotated Aquatic Plants 2023 (Click to Enlarge)</figcaption>
             </figure>
           </article>
         
@@ -156,6 +155,9 @@
           The resulting trend graphs, which show the total number of hexagons
           containing aquatic plants in the Nieuwkoopse Plassen for each year,
           indicate a downward trend in the population.
+          <br><br>
+          Unfortunately, we don’t always have cloud-free satellite images of the Nieuwkoopse Plassen during the bloom period. The green line represents satellite images with complete data coverage for the Nieuwkoopse Plassen, while the blue line indicates images with partial data coverage.
+
         </p>
         </div>
         <article
@@ -171,7 +173,7 @@
               onclick="openImage(this.src, event)"
             />
             <figcaption>
-              Trend graph with the total amount of hexagons with aquatic plants
+              Trend graph with the total amount of hexagons with aquatic plants (Click to Enlarge)
             </figcaption>
           </figure>
         </article>
@@ -213,7 +215,7 @@ Floating car data from the NDW is substantial. Even when aggregated over a year,
               alt="aerial photo"
               onclick="openImage(this.src, event)"
             />
-            <figcaption>Morning Rush Hour Delays in red provincial roads 2023</figcaption>
+            <figcaption>Morning Rush Hour Delays in red provincial roads 2023 (Click to Enlarge)</figcaption>
           </figure>
         </article>
         <article>
@@ -222,9 +224,9 @@ Floating car data from the NDW is substantial. Even when aggregated over a year,
             <img
               src="images/south_holland_traffic_delay_2023_evening_rush_hour.png"
               alt="aerial photo"
-              onclick="openImage(this.src, event, this)"
+              onclick="openImage(this.src, event)"
             />
-            <figcaption>Evening Rush Hour Delays in red provincial roads 2023</figcaption>
+            <figcaption>Evening Rush Hour Delays in red provincial roads 2023 (Click to Enlarge)</figcaption>
           </figure>
         </article>
       </div>
@@ -238,7 +240,7 @@ Floating car data from the NDW is substantial. Even when aggregated over a year,
           In my search for a dollar-cost averaging calculator, I have yet to find one that allows me to search for different stocks, ETFs, or bonds.
 
           In short, dollar-cost averaging is an investment strategy where you invest a fixed amount of money in stocks, ETFs, or bonds at regular intervals, typically at the end of each month.
-          
+          <br><br>
           To address this, I created a website using Flask, Pandas, Python, and JavaScript that enables users to easily search for various stocks, ETFs, or bonds and compare their performance if a certain amount of money had been invested in the past.
           
           Of course, past performance is not a guarantee of future results, but it still provides valuable information about average returns.
@@ -260,7 +262,7 @@ Floating car data from the NDW is substantial. Even when aggregated over a year,
           onclick="openImage(this.src, event)"
         />
         <figcaption>
-          Trend graph with the total amount of hexagons with aquatic plants
+          Trend graph with the total amount of hexagons with aquatic plants (Click to Enlarge)
         </figcaption>
       </figure>
     </article>
