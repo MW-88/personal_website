@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", async () => {
   const username = "MW-88"; // Replace with your GitHub username
-  // Replace with your GitHub token
+  const token = "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"; // Replace with your GitHub token
   const projectsContainer = document.getElementById("pinned-projects");
 
   const query = `
@@ -37,6 +37,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
     const result = await response.json();
+    console.log(result);
     const pinnedRepos = result.data.user.pinnedItems.edges.map(
       (edge) => edge.node
     );
@@ -69,30 +70,43 @@ function openImage(src, event, athis) {
   const enlargedImage = document.getElementById("enlargedImage");
   const enlargedImg = document.getElementById("enlargedImg");
 
-  // Get the clicked image's vertical position
-  const imageTop = event.target.getBoundingClientRect().top + window.scrollY;
-  console.log(imageTop);
+  // Get the bounding rectangle of the clicked image relative to the viewport
+  const rect = event.target.getBoundingClientRect();
+
+  // The current vertical scrolling offset
+  const scrollTop =
+    document.documentElement.scrollTop || document.body.scrollTop;
+
+  // Calculate the element's position relative to the entire document
+  const totalTop = scrollTop + rect.top - 1900;
+
   // Set the source of the enlarged image
   enlargedImg.src = src;
 
-  console.log(src);
-  console.log(athis);
-
-  // Position the overlay at the same height as the clicked image
-  enlargedImage.style.top = `${imageTop}px`;
-  enlargedImage.style.display = "flex";
-
-  var rect = event.target.getBoundingClientRect();
-
-  // rect.top is the distance from the viewport’s top edge
-  // If you want the top relative to the document (including any scrolling):
-  var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  var totalTop = rect.top + scrollTop;
-
+  console.log("-----------");
   console.log("Viewport-relative top:", rect.top);
+  console.log("Scroll Top:", scrollTop);
   console.log("Document-relative top:", totalTop);
+
+  // Position the overlay at the same vertical offset as the clicked image,
+  // taking into account the scroll
+  enlargedImage.style.top = `${totalTop}px`;
+  enlargedImage.style.display = "flex";
 }
 
+function closeImage() {
+  const enlargedImage = document.getElementById("enlargedImage");
+  enlargedImage.style.display = "none";
+}
+
+// Close the enlarged image when clicking outside the image
+document
+  .getElementById("enlargedImage")
+  .addEventListener("click", function (event) {
+    if (event.target === event.currentTarget) {
+      closeImage();
+    }
+  });
 function closeImage() {
   const enlargedImage = document.getElementById("enlargedImage");
   enlargedImage.style.display = "none";
