@@ -122,7 +122,7 @@
               <img
                 src="images/2022_airfoto.PNG"
                 alt="aerial photo"
-                onclick="openImage(this.src)"
+                onclick="openImage(this.src, event)"
               />
               <figcaption>Aerial Photo of Nieuwkoopse Plassen 2023</figcaption>
             </figure>
@@ -132,7 +132,7 @@
               <img
                 src="images/2022_annotations.PNG"
                 alt="aerial photo"
-                onclick="openImage(this.src)"
+                onclick="openImage(this.src, event)"
               />
               <figcaption>Model Annotated Aquatic Plants 2023</figcaption>
             </figure>
@@ -146,6 +146,10 @@
             alt="Enlarged Image"
             onclick="closeImage()"
           />
+        </div>
+
+        <div class="enlarged-image" id="enlargedImage">
+          <img id="enlargedImg" src="" alt="Enlarged Image" />
         </div>
 
         <p>
@@ -164,7 +168,7 @@
             <img
               src="images/aquatic_plants_trend_graph.png"
               alt="Aquatic plans trend graph"
-              onclick="openImage(this.src)"
+              onclick="openImage(this.src, event)"
             />
             <figcaption>
               Trend graph with the total amount of hexagons with aquatic plants
@@ -200,29 +204,70 @@ By averaging these speed measurements over a year and comparing them to the maxi
 
 Floating car data from the NDW is substantial. Even when aggregated over a year, it provides data for all roads in the Netherlands in 15-minute intervals. To handle this volume, we used Spark to filter the data to focus only on provincial roads and specific timeframes, such as morning and evening rush hours.
         </p>
+   
         <div class="articles">
         <article>
           <figure>
             <img
               src="images/south_holland_traffic_delay_2023_morning_rush_hour.png"
               alt="aerial photo"
-              onclick="openImage(this.src)"
+              onclick="openImage(this.src, event)"
             />
             <figcaption>Morning Rush Hour Delays in red provincial roads 2023</figcaption>
           </figure>
         </article>
         <article>
           <figure>
+            
             <img
               src="images/south_holland_traffic_delay_2023_evening_rush_hour.png"
               alt="aerial photo"
-              onclick="openImage(this.src)"
+              onclick="openImage(this.src, event, this)"
             />
             <figcaption>Evening Rush Hour Delays in red provincial roads 2023</figcaption>
           </figure>
         </article>
+      </div>
+
+      <br><br>
+        <hr />
+
+        <h2>Dollar Cost Averaging With Searching For Stock Symbols</h2>
+
+        <p>
+          In my search for a dollar-cost averaging calculator, I have yet to find one that allows me to search for different stocks, ETFs, or bonds.
+
+          In short, dollar-cost averaging is an investment strategy where you invest a fixed amount of money in stocks, ETFs, or bonds at regular intervals, typically at the end of each month.
+          
+          To address this, I created a website using Flask, Pandas, Python, and JavaScript that enables users to easily search for various stocks, ETFs, or bonds and compare their performance if a certain amount of money had been invested in the past.
+          
+          Of course, past performance is not a guarantee of future results, but it still provides valuable information about average returns.
+        <br><br>
+        See the link to the website <a href="https://q84cf64c03e264ab9b5bdcd3.azurewebsites.net/"> here </a>
+      </p>
+
+
+      <article
+      style="
+        display: inline-block; /* Ensure the article behaves as a block element */
+        padding-left: 10px;/* Move the entire content of the article to the right */
+      "
+    >
+      <figure>
+        <img
+          src="images/DCA_michael.png"
+          alt="Aquatic plans trend graph"
+          onclick="openImage(this.src, event)"
+        />
+        <figcaption>
+          Trend graph with the total amount of hexagons with aquatic plants
+        </figcaption>
+      </figure>
+    </article>
+
+
       </section>
-    </div>
+    
       <!-- Projects Section -->
       <section id="projects" class="glass">
         <h1>(Open Source) Projects</h1>

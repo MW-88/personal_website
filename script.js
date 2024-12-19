@@ -65,11 +65,32 @@ const yearsSince2018 = new Date().getFullYear() - 2017;
 // Insert the calculated value into the text
 document.getElementById("years").textContent = yearsSince2018;
 
-function openImage(src) {
+function openImage(src, event, athis) {
   const enlargedImage = document.getElementById("enlargedImage");
   const enlargedImg = document.getElementById("enlargedImg");
+
+  // Get the clicked image's vertical position
+  const imageTop = event.target.getBoundingClientRect().top + window.scrollY;
+  console.log(imageTop);
+  // Set the source of the enlarged image
   enlargedImg.src = src;
+
+  console.log(src);
+  console.log(athis);
+
+  // Position the overlay at the same height as the clicked image
+  enlargedImage.style.top = `${imageTop}px`;
   enlargedImage.style.display = "flex";
+
+  var rect = event.target.getBoundingClientRect();
+
+  // rect.top is the distance from the viewport’s top edge
+  // If you want the top relative to the document (including any scrolling):
+  var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  var totalTop = rect.top + scrollTop;
+
+  console.log("Viewport-relative top:", rect.top);
+  console.log("Document-relative top:", totalTop);
 }
 
 function closeImage() {
@@ -77,7 +98,7 @@ function closeImage() {
   enlargedImage.style.display = "none";
 }
 
-// Optional: Close the enlarged image when clicking outside of it
+// Close the enlarged image when clicking outside the image
 document
   .getElementById("enlargedImage")
   .addEventListener("click", function (event) {
