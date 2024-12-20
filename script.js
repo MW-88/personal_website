@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", async () => {
   const username = "MW-88"; // Replace with your GitHub username
-  const token = "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"; // Replace with your GitHub token
+  const token = "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"; // Replace with your GitHub token
   const projectsContainer = document.getElementById("pinned-projects");
 
   const query = `
