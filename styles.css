@@ -88,6 +88,8 @@ section {
   border-radius: 15px;
   text-align: center;
   max-width: 800px;
+  display: sticky;
+  z-index: -1;
 }
 
 /* Project Container */
@@ -129,9 +131,11 @@ section {
 }
 
 /* Main Container */
-#main\\.container {
+#mainblock {
   overflow: visible; /* Allow natural scrolling of the entire page */
   padding: 20px; /* Adds spacing for content */
+
+  flex-direction: column;
 }
 
 /* Responsive Design */
@@ -233,7 +237,7 @@ article p {
   background-color: rgba(0, 0, 0, 0.8);
   justify-content: center;
   align-items: center;
-  z-index: 1000;
+  z-index: 9999;
 }
 
 .enlarged-image img {

@@ -23,18 +23,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   try {
     // Fetch pinned repositories using the GitHub GraphQL API
-    const response = await fetch("https://api.github.com/graphql", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${token}`,
-      },
-      body: JSON.stringify({ query }),
-    });
-
-    if (!response.ok) {
-      throw new Error("Failed to fetch pinned repositories");
-    }
+    const response = await fetch("http://localhost:3000/github/MW-88");
 
     const result = await response.json();
     console.log(result);
@@ -83,20 +72,13 @@ function openImage(src, event) {
   // Set the source of the enlarged image
   enlargedImg.src = src;
 
-  console.log("-----------");
-  console.log("Viewport-relative top:", rect.top);
-  console.log("Scroll Top:", scrollTop);
-  console.log("Document-relative top:", totalTop);
-
   // Position the overlay at the same vertical offset as the clicked image,
   // taking into account the scroll
   enlargedImage.style.top = `${totalTop}px`;
   enlargedImage.style.display = "flex";
-}
 
-function closeImage() {
-  const enlargedImage = document.getElementById("enlargedImage");
-  enlargedImage.style.display = "none";
+  const projects = document.getElementById("projects");
+  projects.style.display = "none";
 }
 
 // Close the enlarged image when clicking outside the image
@@ -110,6 +92,9 @@ document
 function closeImage() {
   const enlargedImage = document.getElementById("enlargedImage");
   enlargedImage.style.display = "none";
+
+  const projects = document.getElementById("projects");
+  projects.style.display = "block";
 }
 
 // Close the enlarged image when clicking outside the image
