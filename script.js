@@ -23,7 +23,9 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   try {
     // Fetch pinned repositories using the GitHub GraphQL API
-    const response = await fetch("http://localhost:3000/github/MW-88");
+    const response = await fetch(
+      "https://mw-website-backend-cwhvcnhbf3gcfbdk.northeurope-01.azurewebsites.net/github/MW-88"
+    );
 
     const result = await response.json();
     console.log(result);
