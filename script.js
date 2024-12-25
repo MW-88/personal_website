@@ -27,11 +27,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       "https://mw-website-backend-cwhvcnhbf3gcfbdk.northeurope-01.azurewebsites.net/github/MW-88"
     );
 
-    const result = await response.json();
-    console.log(result);
-    const pinnedRepos = result.data.user.pinnedItems.edges.map(
-      (edge) => edge.node
-    );
+    const pinnedRepos = await response.json();
 
     // Display pinned repositories
     pinnedRepos.forEach((repo) => {
