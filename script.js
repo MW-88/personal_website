@@ -65,7 +65,7 @@ function openImage(src, event) {
     document.documentElement.scrollTop || document.body.scrollTop;
 
   // Calculate the element's position relative to the entire document
-  const totalTop = scrollTop + rect.top - 1900;
+  const totalTop = scrollTop + rect.top - 2100;
 
   // Set the source of the enlarged image
   enlargedImg.src = src;
